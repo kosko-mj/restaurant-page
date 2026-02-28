@@ -1,3 +1,5 @@
+import steakImage from './images/steak.jpg'
+
 export default function loadMenu() {
     const content = document.getElementById('content');
     content.innerHTML = '';
@@ -5,6 +7,12 @@ export default function loadMenu() {
     const menuDiv = document.createElement('div');
     menuDiv.classList.add('tab-content');
     menuDiv.id = 'menu';
+
+    document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(${steakImage})`;
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
+    document.body.style.backgroundAttachment = 'fixed';
+    document.body.style.backgroundBlendMode = 'overlay';
     
     menuDiv.innerHTML = `
         <h2>KITCHEN</h2>

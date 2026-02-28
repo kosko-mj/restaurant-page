@@ -1,10 +1,10 @@
 import './style.css';
-import loadHome from './home.js';
+import loadAbout from './about.js';  // Import INFO first
+import loadBar from './home.js';
 import loadMenu from './menu.js';
-import loadAbout from './about.js';
 
-// Load home page by default
-loadHome();
+// Load INFO page by default
+loadAbout();
 
 // Set up tab switching
 document.querySelectorAll('.tab-btn').forEach(button => {
@@ -20,14 +20,14 @@ document.querySelectorAll('.tab-btn').forEach(button => {
         // Load the appropriate tab
         const tabName = button.dataset.tab;
         switch(tabName) {
+            case 'about':
+                loadAbout();
+                break;
             case 'home':
-                loadHome();
+                loadBar();
                 break;
             case 'menu':
                 loadMenu();
-                break;
-            case 'about':
-                loadAbout();
                 break;
         }
     });

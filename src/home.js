@@ -1,3 +1,5 @@
+import interiorImage from './images/interior.jpg'
+
 export default function loadBar() {
     const content = document.getElementById('content');
     content.innerHTML = '';
@@ -5,6 +7,12 @@ export default function loadBar() {
     const barDiv = document.createElement('div');
     barDiv.classList.add('tab-content');
     barDiv.id = 'home';
+
+   document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(${interiorImage})`;
+   document.body.style.backgroundSize = 'cover';
+   document.body.style.backgroundPosition = 'center';
+   document.body.style.backgroundAttachment = 'fixed';
+   document.body.style.backgroundBlendMode = 'overlay';
     
     barDiv.innerHTML = `
         <h2>BAR</h2>
